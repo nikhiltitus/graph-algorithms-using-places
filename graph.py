@@ -3,9 +3,8 @@ import sys
 import argparse
 
 class Place:
-    def __init__(self, name, id):
+    def __init__(self, name):
         self.name = name
-        self.id = id
         self.neighbors = {}
 
     def add_neighbor(self, place, distance):
@@ -15,11 +14,9 @@ class Place:
 class Graph:
     def __init__(self):
         self.place_map = {}
-        self.id = 1
 
     def add_place(self, name):
-        self.id = self.id + 1
-        place = Place(name, self.id)
+        place = Place(name)
         self.place_map[place.name] = place
         return place
 
