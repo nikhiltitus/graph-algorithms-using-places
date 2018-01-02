@@ -15,4 +15,4 @@ Use it as:
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+This code is released under MIT license: https://opensource.org/licenses/MIT
