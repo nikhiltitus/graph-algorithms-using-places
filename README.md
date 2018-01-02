@@ -7,9 +7,9 @@ Make sure that the placeinfo file contains all the required information about th
 
 Use it as:
 
-`python source destination`
+`python graph.py source destination`
 
-`python Kochi Thrissur`
+`python graph.py Kochi Thrissur`
 
 
 

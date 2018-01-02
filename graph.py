@@ -51,7 +51,7 @@ class Graph:
     def dijkstra(self,source,destination):
         visited_places=set()
         distance_map = {source.name:0}
-        current=source.name
+        current=source
         while destination.name not in visited_places and current is not None:
             current=self.min_distance(distance_map,visited_places)
             current_place=self.place_map[current]
@@ -92,8 +92,8 @@ def main():
     graph = read_file(args.fileLocation)
     source=args.source
     destination=args.destination
-    print(graph.check_path(graph.get_place(source), graph.get_place(destination)))
-    print(graph.dijkstra(graph.get_place(source),graph.get_place(destination)))
+    print('Does a path exist: '+str(graph.check_path(graph.get_place(source), graph.get_place(destination))))
+    print('Distance between source and destination'+str(graph.dijkstra(graph.get_place(source),graph.get_place(destination))))
 
 if __name__ == "__main__":
     main()
