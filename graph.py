@@ -30,14 +30,15 @@ class Graph:
         visited_places = set()
         queue = deque()
         queue.append(source)
+        visited_places.add(source)
         while queue:
             place = queue.popleft()
-            visited_places.add(place)
             for neighbor in place.neighbors:
                 if neighbor == destination:
                     return True
                 elif neighbor not in visited_places:
                     queue.append(neighbor)
+                    visited_places.add(neighbor)
         return False
     def min_distance(self,distance_map):
         min_distance=sys.maxsize
