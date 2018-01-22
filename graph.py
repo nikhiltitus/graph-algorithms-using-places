@@ -24,7 +24,7 @@ class Graph:
         if name in self.place_map:
             return self.place_map[name]
         else:
-            return False
+            return None
     '''BFS Implementation'''
     def check_path(self, source, destination):
         visited_places = set()
