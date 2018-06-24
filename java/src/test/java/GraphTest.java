@@ -1,11 +1,12 @@
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class GraphTest {
     private Graph graph;
 
     @Before
+    @Test(groups={"checkpath-test"})
     //Set up with place 1 connected to 2 and 3. place 4 connected to 3.
     public void setUp(){
         graph=new Graph();
@@ -14,8 +15,9 @@ public class GraphTest {
         place1.addNeighbor(place2);place1.addNeighbor(place3);
         place3.addNeighbor(place4);
     }
-    @Test
+    @Test(groups={"checkpath-test"})
     public void testCheckPath(){
+        System.out.println("Running testcheckpath");
         Assert.assertTrue(graph.checkPath("1","4"));
         Assert.assertFalse(graph.checkPath("1","5"));
     }

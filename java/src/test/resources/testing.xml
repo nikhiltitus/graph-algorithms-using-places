@@ -1,0 +1,8 @@
+<suite name="Suite1" verbose="1" >
+    <test name="checkpath">
+        <classes>
+            <class name="GraphTest"/>
+
+        </classes>
+    </test>
+</suite>
